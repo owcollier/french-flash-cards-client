@@ -13,6 +13,9 @@ export function LandingPage(props) {
     return (
         <div className="home">
             <h2>Welcome to Foo App</h2>
+            <div className="app-description">
+                <span>Lorem ipsum dolor sit amet, massa faucibus ex vulputate volutpat, lacus imperdiet ac. Nisl ut, arcu et, magnis cras at, suscipit posuere, leo at. Aliquam risus mus suspendisse aliquam id, laoreet metus mattis amet sed mauris, convallis neque ligula condimentum nulla. Et ullamcorper nunc.</span>
+            </div>
             <LoginForm />
             <Link to="/register">Register</Link>
         </div>
