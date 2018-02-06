@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "redux-devtools-extension": "^2.13.2"
   },
   "dependencies": {
     "cors": "^2.8.4",
