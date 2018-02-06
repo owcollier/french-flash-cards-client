@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
 import {fetchQuestion} from '../actions/questions';
 import SpacedRepQuestion from './spaced-rep-question';
-import SpacedRepAnswer from './spaced-rep-question';
+import SpacedRepAnswer from './spaced-rep-answer';
 
 export class SpacedRepSession extends React.Component {
     componentDidMount() {
@@ -20,7 +20,7 @@ export class SpacedRepSession extends React.Component {
                 <span className="session-name">
                     Welcome {this.props.name}!
                 </span>
-                <SpacedRepQuestion props={this.props.question}/>
+                <SpacedRepQuestion question={this.props.question}/>
                 <SpacedRepAnswer onClick={input => this.onClick(input)}/>
             </div>
         );
@@ -32,8 +32,8 @@ const mapStateToProps = state => {
     return {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
-        question: state.questions[0]
+        question: state.question.question
     };
 };
 
-export default requiresLogin()(connect(mapStateToProps)(SpacedRepQuestion));
+export default requiresLogin()(connect(mapStateToProps)(SpacedRepSession));

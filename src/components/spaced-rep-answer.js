@@ -11,8 +11,8 @@ export default function SpacedRepAnswer(props) {
             </div>
             <input
               type="text"
-              ref={(input) => {textInput = input; }} />
-            <button className="button" onClick={textInput => props.onClick(textInput)}>
+              id='textInput'/>
+            <button className="button" onClick={() => props.onClick(document.getElementById('textInput').value)}>
               Submit translation!
             </button>
         </div>

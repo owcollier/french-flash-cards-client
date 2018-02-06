@@ -7,6 +7,7 @@ import LandingPage from './landing-page';
 import Dashboard from './dashboard';
 import RegistrationPage from './registration-page';
 import {refreshAuthToken} from '../actions/auth';
+import SpacedRepSession from './spaced-rep-session';
 
 export class App extends React.Component {
     componentWillReceiveProps(nextProps) {
@@ -44,6 +45,7 @@ export class App extends React.Component {
                 <HeaderBar />
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/dashboard" component={Dashboard} />
+                <Route exact path="/session" component={SpacedRepSession} />
                 <Route exact path="/register" component={RegistrationPage} />
             </div>
         );
