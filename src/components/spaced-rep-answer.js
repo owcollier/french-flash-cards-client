@@ -2,8 +2,6 @@ import React from 'react';
 
 export default function SpacedRepAnswer(props) {
 
-    let textInput = null;
-
     return (
         <div className="session-answer">
             <div className="session-answer-header">
