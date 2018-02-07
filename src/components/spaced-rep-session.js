@@ -4,6 +4,7 @@ import requiresLogin from './requires-login';
 import {fetchQuestion} from '../actions/questions';
 import SpacedRepQuestion from './spaced-rep-question';
 import SpacedRepAnswer from './spaced-rep-answer';
+import SpacedRepFeedback from './spaced-rep-feedback';
 
 import './spaced-rep-session.css'
 
@@ -19,7 +20,7 @@ export class SpacedRepSession extends React.Component {
         this.props.dispatch(fetchQuestion());
     }
 
-    onClick(input) {
+    onAnswerSubmit(input) {
         const answer = input.toLowerCase().trim();
         const correct = this.props.answer.toLowerCase();
         if (answer === correct) {
@@ -34,6 +35,7 @@ export class SpacedRepSession extends React.Component {
     }
 
     render() {
+        const isFeedback = this.state.feedback;
         return (
             <div className="session">
                 <span className="session-name">
@@ -44,7 +46,10 @@ export class SpacedRepSession extends React.Component {
                 </div>
                 <div className="session-qa">
                     <SpacedRepQuestion question={this.props.question}/>
-                    <SpacedRepAnswer onClick={input => this.onClick(input)}/>
+                    {isFeedback ? (<SpacedRepFeedback />)
+                     : 
+                     (<SpacedRepAnswer onClick={input => this.onAnswerSubmit(input)}/>)
+                     }
                 </div>
             </div>
         );

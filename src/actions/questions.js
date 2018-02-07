@@ -36,27 +36,26 @@ export const fetchQuestion = () => (dispatch, getState) => {
     });
 };
 
-// export const submitQuestion = (question, answer) => (dispatch,getState) => {
-//     dispatch(submitQuestionRequest());
-//     const authToken = getState().auth.authToken;
-//     return fetch (`${API_BASE_URL}/questions/submit`, {
-//         method: 'POST',
-//         headers: {
-//             Authorization: `Bearer ${authToken}`,
-//             'Content-Type':'application/json'
-//         },
-//         body: JSON.stringify({
-//             question,
-//             answer
-//         })
-//     })
-//     .then(res => normalizeResponseErrors(res))
-//     .then(res => {
-//         if(!res.ok) {
-//           throw new Error(res.statusTest)
-//         }
-//         dispatch(fetchQuestion());
-//     }).catch(err =>
-//         dispatch(submitQuestionError(err))
-//     );
-// }
+export const submitQuestion = (answer) => (dispatch,getState) => {
+    dispatch(submitQuestionRequest());
+    const authToken = getState().auth.authToken;
+    return fetch (`${API_BASE_URL}/questions/submit`, {
+        method: 'POST',
+        headers: {
+            Authorization: `Bearer ${authToken}`,
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+            isCorrect: answer
+        })
+    })
+    .then(res => normalizeResponseErrors(res))
+    .then(res => {
+        if(!res.ok) {
+          throw new Error(res.statusTest)
+        }
+        dispatch(fetchQuestion());
+    }).catch(err =>
+        dispatch(submitQuestionError(err))
+    );
+}
