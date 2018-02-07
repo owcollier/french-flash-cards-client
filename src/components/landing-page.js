@@ -4,6 +4,8 @@ import {Link, Redirect} from 'react-router-dom';
 
 import LoginForm from './login-form';
 
+import './landing-page.css';
+
 export function LandingPage(props) {
     // If we are logged in redirect straight to the spaced repetition session
     if (props.loggedIn) {
@@ -23,7 +25,7 @@ export function LandingPage(props) {
                 <span className="landing-descrip"><strong>French Flash Cards</strong> implements the Spaced Repetition method by allowing you to practice French Vocabulary according to its principles. A practice session revolves around a set of vocabulary words served up to you according to which word is at the beginning or <em>head</em> of a vocabulary list. Every word that you translate correctly will be pushed further back in the list, while every word you translate incorrectly will remain near the beginning of the list. As a result, you will be provided with the opportunity to review what you don't know more often until you master it, and revisit what you do know less often in order to test how well you've retained the knowledge!</span>
                 <br></br>
                 <br></br>
-                <span className="landing-descrip">We at <strong>Lingua Franc</strong> trust that you will enjoy using <strong>French Flash Cards</strong> for your French vocabulary practice and wish you both a wonderful life and <em>fantastique</em> day</span>
+                <span className="landing-descrip">We at <strong>Lingua Franca</strong> trust that you will enjoy using <strong>French Flash Cards</strong> for your French vocabulary practice and wish you both a wonderful life and <em>fantastique</em> day.</span>
                 <br></br>
                 <br></br>
                 <span className="landing-page-adieu">Au revior and adieu!</span>

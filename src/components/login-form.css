@@ -1,0 +1,16 @@
+.login-container {
+  margin:auto;
+  width: 75%;
+  padding: 10px;
+  text-align: center;
+  border: 3px solid blue;
+}
+
+.login-span {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.login-form {
+  padding: 10px;
+}

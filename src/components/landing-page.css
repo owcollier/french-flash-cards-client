@@ -1,0 +1,9 @@
+.home h2 {
+  text-align: center; 
+}
+
+.app-description {
+  margin:auto;
+  width: 75%;
+  padding: 10px;
+}
