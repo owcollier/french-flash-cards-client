@@ -28,10 +28,35 @@ export const fetchQuestion = () => (dispatch, getState) => {
         //   user
         // })
     })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then(({question, answer}) => dispatch(fetchQuestionSuccess(question, answer)))
-        .catch(err => {
-            dispatch(fetchQuestionError(err));
-        });
+    .then(res => normalizeResponseErrors(res))
+    .then(res => res.json())
+    .then(({question, answer}) => dispatch(fetchQuestionSuccess(question, answer)))
+    .catch(err => {
+        dispatch(fetchQuestionError(err));
+    });
 };
+
+// export const submitQuestion = (question, answer) => (dispatch,getState) => {
+//     dispatch(submitQuestionRequest());
+//     const authToken = getState().auth.authToken;
+//     return fetch (`${API_BASE_URL}/questions/submit`, {
+//         method: 'POST',
+//         headers: {
+//             Authorization: `Bearer ${authToken}`,
+//             'Content-Type':'application/json'
+//         },
+//         body: JSON.stringify({
+//             question,
+//             answer
+//         })
+//     })
+//     .then(res => normalizeResponseErrors(res))
+//     .then(res => {
+//         if(!res.ok) {
+//           throw new Error(res.statusTest)
+//         }
+//         dispatch(fetchQuestion());
+//     }).catch(err =>
+//         dispatch(submitQuestionError(err))
+//     );
+// }
