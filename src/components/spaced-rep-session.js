@@ -5,6 +5,8 @@ import {fetchQuestion} from '../actions/questions';
 import SpacedRepQuestion from './spaced-rep-question';
 import SpacedRepAnswer from './spaced-rep-answer';
 
+import './spaced-rep-session.css'
+
 export class SpacedRepSession extends React.Component {
     componentDidMount() {
         this.props.dispatch(fetchQuestion());
@@ -20,8 +22,10 @@ export class SpacedRepSession extends React.Component {
                 <span className="session-name">
                     Welcome {this.props.name}!
                 </span>
-                <SpacedRepQuestion question={this.props.question}/>
-                <SpacedRepAnswer onClick={input => this.onClick(input)}/>
+                <div className="session-qa">
+                    <SpacedRepQuestion question={this.props.question}/>
+                    <SpacedRepAnswer onClick={input => this.onClick(input)}/>
+                </div>
             </div>
         );
     }

@@ -1,3 +1,9 @@
 .header-bar {
   text-align: center;
 }
+
+.header-bar button {
+  position: relative;
+  left: 40%;
+  bottom: 48px;
+}

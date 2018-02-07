@@ -1,0 +1,19 @@
+.session {
+  margin:auto;
+  width: 75%;
+  padding: 10px;
+}
+
+.session-name {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.session-qa {
+  padding-top: 20px;
+  display: flex;
+}
+
+.session-qa div {
+  flex-grow: 2;
+}

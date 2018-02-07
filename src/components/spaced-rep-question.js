@@ -1,4 +1,5 @@
 import React from 'react';
+import './spaced-rep-question.css'
 
 export default function SpacedRepQuestion(props) {
 

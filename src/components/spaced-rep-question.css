@@ -1,0 +1,9 @@
+.session-question {
+  border: 2px solid blue;
+  height: 400px;
+  text-align: center;
+}
+
+.session-question div {
+  padding-top: 20px;
+}
