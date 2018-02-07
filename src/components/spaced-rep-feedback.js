@@ -9,7 +9,7 @@ export default function SpacedRepFeedback(props) {
             Feedback here
             </div>
             <div className="session-feedback-next">
-                <button className="button" onClick={console.log('next question')}>
+                <button className="button" onClick={() => props.onClick()}>
                 Next flash card >
                 </button>
             </div>

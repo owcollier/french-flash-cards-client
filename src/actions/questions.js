@@ -14,6 +14,22 @@ export const fetchQuestionError = error => ({
     error
 });
 
+export const SUBMIT_QUESTION_REQUEST = 'SUBMIT_QUESTION_REQUEST';
+export const submitQuestionRequest = () => ({
+    type: SUBMIT_QUESTION_REQUEST
+})
+
+export const SUBMIT_QUESTION_SUCCESS = 'SUBMIT_QUESTION_SUCCESS';
+export const submitQuestionSuccess = () => ({
+    type: SUBMIT_QUESTION_SUCCESS
+})
+
+export const SUBMIT_QUESTION_ERROR = 'SUBMIT_QUESTION_ERROR';
+export const submitQuestionError = error => ({
+    type: SUBMIT_QUESTION_ERROR,
+    error
+})
+
 export const fetchQuestion = () => (dispatch, getState) => {
     const authToken = getState().auth.authToken;
     // const user = getState().auth.currentUser;
@@ -36,7 +52,7 @@ export const fetchQuestion = () => (dispatch, getState) => {
     });
 };
 
-export const submitQuestion = (answer) => (dispatch,getState) => {
+export const submitQuestion = (boolean) => (dispatch,getState) => {
     dispatch(submitQuestionRequest());
     const authToken = getState().auth.authToken;
     return fetch (`${API_BASE_URL}/questions/submit`, {
@@ -46,14 +62,16 @@ export const submitQuestion = (answer) => (dispatch,getState) => {
             'Content-Type':'application/json'
         },
         body: JSON.stringify({
-            isCorrect: answer
+            isCorrect: boolean
         })
     })
     .then(res => normalizeResponseErrors(res))
     .then(res => {
+        console.log('response from post:', res);
         if(!res.ok) {
           throw new Error(res.statusTest)
         }
+        dispatch(submitQuestionSuccess());
         dispatch(fetchQuestion());
     }).catch(err =>
         dispatch(submitQuestionError(err))

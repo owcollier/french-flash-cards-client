@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from './requires-login';
-import {fetchQuestion} from '../actions/questions';
+import {fetchQuestion, submitQuestion} from '../actions/questions';
 import SpacedRepQuestion from './spaced-rep-question';
 import SpacedRepAnswer from './spaced-rep-answer';
 import SpacedRepFeedback from './spaced-rep-feedback';
@@ -12,7 +12,8 @@ export class SpacedRepSession extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            feedback:''
+            feedback:'',
+            isCorrect: null
         };
       }
 
@@ -25,13 +26,23 @@ export class SpacedRepSession extends React.Component {
         const correct = this.props.answer.toLowerCase();
         if (answer === correct) {
             this.setState({
-                feedback: `${answer} is the correct translation of ${this.props.question}. Congratulations!`
+                feedback: `${answer} is the correct translation of ${this.props.question}. Congratulations!`,
+                isCorrect: true
             })
         } else {
             this.setState({
-                feedback: `Sorry. ${answer} is not the correct translation. ${this.props.answer} is the correct English translation of ${this.props.question}`
+                feedback: `Sorry. ${answer} is not the correct translation. ${this.props.answer} is the correct English translation of ${this.props.question}`,
+                isCorrect: false
             })
         }
+    }
+
+    onNextQuestion() {
+        this.setState({
+            feedback:'',
+            isCorrect: null
+        })
+        this.props.dispatch(submitQuestion(this.state.isCorrect));
     }
 
     render() {
@@ -46,7 +57,7 @@ export class SpacedRepSession extends React.Component {
                 </div>
                 <div className="session-qa">
                     <SpacedRepQuestion question={this.props.question}/>
-                    {isFeedback ? (<SpacedRepFeedback />)
+                    {isFeedback ? (<SpacedRepFeedback onClick={() => this.onNextQuestion()} />)
                      : 
                      (<SpacedRepAnswer onClick={input => this.onAnswerSubmit(input)}/>)
                      }
