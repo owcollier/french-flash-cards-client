@@ -4,15 +4,26 @@
 }
 
 .header-bar button {
-  position: relative;
-  left: 40%;
-  bottom: 70px;
+  position: absolute;
+  right: 2%;
+  top: 50px;
+  width: 80px;
+  height:40px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.title-name {
+  position: absolute;
+  left: 10%;
+  top: .5em;
 }
 
 .flag {
   display: block;
   position: relative;
-  top: 100px;
+  top: 20px;
   right: -40px;
 }
 
