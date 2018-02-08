@@ -56,7 +56,7 @@ export class SpacedRepSession extends React.Component {
                     You've translated {this.props.score} words correctly using French Flash Cards. Good job!
                 </div>
                 <div className="session-qa">
-                    <SpacedRepQuestion question={this.props.question}/>
+                    <SpacedRepQuestion head={this.props.head} question={this.props.question}/>
                     {isFeedback ? (<SpacedRepFeedback feedback={this.state.feedback} onClick={() => this.onNextQuestion()} />)
                      : 
                      (<SpacedRepAnswer onClick={input => this.onAnswerSubmit(input)}/>)
@@ -74,6 +74,7 @@ const mapStateToProps = state => {
         name: `${currentUser.firstName} ${currentUser.lastName}`,
         question: state.question.question,
         answer: state.question.answer,
+        head: state.question.head,
         score: state.question.score
     };
 };
