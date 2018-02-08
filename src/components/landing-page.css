@@ -7,3 +7,14 @@
   width: 75%;
   padding: 10px;
 }
+
+.register-link {
+  text-align: center;
+  left: 50%;
+  padding: 20px;
+  color: green;
+}
+
+.register-link a {
+  margin: auto;
+}

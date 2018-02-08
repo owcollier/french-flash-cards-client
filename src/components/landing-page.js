@@ -33,7 +33,9 @@ export function LandingPage(props) {
                 <br></br>
             </div>
             <LoginForm />
-            <Link to="/register">Register</Link>
+            <div className="register-link">
+                <Link to="/register">Register</Link>
+            </div>
         </div>
     );
 }
