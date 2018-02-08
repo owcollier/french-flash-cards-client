@@ -52,12 +52,12 @@ export class SpacedRepSession extends React.Component {
                 <span className="session-name">
                     Welcome {this.props.name}!
                 </span>
-                <div className="session-feedback">
-                    {this.state.feedback}
+                <div className="session-score">
+                    You've translated {this.props.score} words correctly using French Flash Cards. Good job!
                 </div>
                 <div className="session-qa">
                     <SpacedRepQuestion question={this.props.question}/>
-                    {isFeedback ? (<SpacedRepFeedback onClick={() => this.onNextQuestion()} />)
+                    {isFeedback ? (<SpacedRepFeedback feedback={this.state.feedback} onClick={() => this.onNextQuestion()} />)
                      : 
                      (<SpacedRepAnswer onClick={input => this.onAnswerSubmit(input)}/>)
                      }
@@ -73,7 +73,8 @@ const mapStateToProps = state => {
         username: state.auth.currentUser.username,
         name: `${currentUser.firstName} ${currentUser.lastName}`,
         question: state.question.question,
-        answer: state.question.answer
+        answer: state.question.answer,
+        score: state.question.score
     };
 };
 
