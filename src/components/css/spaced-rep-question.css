@@ -1,8 +1,19 @@
 .session-question {
-  height: 400px;
   text-align: center;
+  margin-top: 20px;
+  background: rgba(16, 52, 226, 0.8);
+  border-radius: 5px;
+  box-shadow: 1px 1px #ddaaaa;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  color: white;
 }
 
 .session-question div {
   padding-top: 20px;
+}
+
+.session-question-word {
+  text-shadow: 0 0 0.2em rgb(37, 255, 4);
+  font-weight: bold; 
 }

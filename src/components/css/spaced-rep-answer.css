@@ -1,10 +1,16 @@
 .session-answer {
-  height: 400px;
   text-align: center;
+  margin-top: 20px;
+  background: rgba(16, 52, 226, 0.8);
+  border-radius: 5px;
+  box-shadow: 1px 1px #ddaaaa;
+  padding-top: 130px;
+  padding-bottom: 120px;
+  color: white;
 }
 
 .session-answer div {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 input {

@@ -1,9 +1,22 @@
 .header-bar {
   text-align: center;
+  background-color: white;
 }
 
 .header-bar button {
   position: relative;
   left: 40%;
-  bottom: 48px;
+  bottom: 70px;
+}
+
+.flag {
+  display: block;
+  position: relative;
+  top: 100px;
+  right: -40px;
+}
+
+h1 {
+  color: red;
+  font-size: 3em;
 }

@@ -9,11 +9,9 @@ export default function SpacedRepAnswer(props) {
                 Please enter English translation below:
             </div>
             <div className="session-answer-input">
-                <div>
                     <input
                         type="text"
                         id='textInput' />
-                </div>
                 <div>
                     <button className="button" onClick={() => props.onClick(document.getElementById('textInput').value)}>
                         Submit translation!
