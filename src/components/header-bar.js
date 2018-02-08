@@ -21,7 +21,7 @@ export class HeaderBar extends React.Component {
         }
         return (
             <div className="header-bar">
-                <svg className="flag" xmls="http://w3.org/2000/svg" width="100" height="66">
+                <svg className="flag" width="100" height="66">
                     <rect width="100" height="66" fill="#ED2939"></rect>
                     <rect width="66" height="66" fill="#fff"></rect>
                     <rect width="33" height="66" fill="#002395"></rect>
