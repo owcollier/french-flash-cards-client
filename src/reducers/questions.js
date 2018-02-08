@@ -9,6 +9,7 @@ import {
 const initialState = {
   question: '',
   answer: '',
+  head: null,
   score: 0,
   loading: false,
   error: null
@@ -19,6 +20,7 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, {
           question: action.question,
           answer: action.answer,
+          head: action.head,
           score: action.score,
           error: null
       });
@@ -32,9 +34,7 @@ export default function reducer(state = initialState, action) {
       });
   } else if (action.type === SUBMIT_QUESTION_SUCCESS) {
       return Object.assign({}, state, {
-        loading: false,
-        question: '',
-        answer: ''
+        loading: false
       });
   } else if (action.type === SUBMIT_QUESTION_ERROR) {
       return Object.assign({}, state, {
