@@ -2,10 +2,11 @@ import {API_BASE_URL} from '../config';
 import {normalizeResponseErrors} from './utils';
 
 export const FETCH_QUESTION_SUCCESS = 'FETCH_PROTECTED_DATA_SUCCESS';
-export const fetchQuestionSuccess = (question, answer) => ({
+export const fetchQuestionSuccess = (question, answer, score) => ({
     type: FETCH_QUESTION_SUCCESS,
     question,
-    answer
+    answer,
+    score
 });
 
 export const FETCH_QUESTION_ERROR = 'FETCH_PROTECTED_DATA_ERROR';
@@ -46,7 +47,7 @@ export const fetchQuestion = () => (dispatch, getState) => {
     })
     .then(res => normalizeResponseErrors(res))
     .then(res => res.json())
-    .then(({question, answer}) => dispatch(fetchQuestionSuccess(question, answer)))
+    .then(({question, answer, score}) => dispatch(fetchQuestionSuccess(question, answer, score)))
     .catch(err => {
         dispatch(fetchQuestionError(err));
     });

@@ -6,7 +6,7 @@ export default function SpacedRepFeedback(props) {
     return (
         <div className="session-feedback">
             <div className="session-feedback-header">
-            Feedback here
+            {props.feedback}
             </div>
             <div className="session-feedback-next">
                 <button className="button" onClick={() => props.onClick()}>

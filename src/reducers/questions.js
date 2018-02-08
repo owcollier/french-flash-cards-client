@@ -9,6 +9,7 @@ import {
 const initialState = {
   question: '',
   answer: '',
+  score: 0,
   loading: false,
   error: null
 };
@@ -18,6 +19,7 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, {
           question: action.question,
           answer: action.answer,
+          score: action.score,
           error: null
       });
   } else if (action.type === FETCH_QUESTION_ERROR) {
