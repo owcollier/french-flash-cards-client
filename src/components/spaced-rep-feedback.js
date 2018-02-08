@@ -1,5 +1,5 @@
 import React from 'react';
-import './spaced-rep-answer.css';
+import './css/spaced-rep-feedback.css';
 
 export default function SpacedRepFeedback(props) {
 
