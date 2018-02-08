@@ -34,10 +34,7 @@ export default function reducer(state = initialState, action) {
       });
   } else if (action.type === SUBMIT_QUESTION_SUCCESS) {
       return Object.assign({}, state, {
-        loading: false,
-        question: '',
-        answer: '',
-        head: null
+        loading: false
       });
   } else if (action.type === SUBMIT_QUESTION_ERROR) {
       return Object.assign({}, state, {
