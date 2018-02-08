@@ -6,7 +6,7 @@ import SpacedRepQuestion from './spaced-rep-question';
 import SpacedRepAnswer from './spaced-rep-answer';
 import SpacedRepFeedback from './spaced-rep-feedback';
 
-import './spaced-rep-session.css'
+import './css/spaced-rep-session.css'
 
 export class SpacedRepSession extends React.Component {
     constructor(props) {

@@ -1,0 +1,14 @@
+.session-feedback {
+    text-align: center;
+    margin-top: 20px;
+    background-color: rgb(179, 210, 228);
+    border-radius: 8px;
+  }
+  
+  .session-feedback-next div {
+    padding-top: 20px;
+  }
+
+  .session-feedback-next {
+      margin-top: 50px;
+  }
