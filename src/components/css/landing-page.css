@@ -21,10 +21,14 @@
 
 .landing-descrip {
   font-size: 22px;
+  display: block;
+  padding: 10px;
 }
 
 .landing-descrip-inner {
   font-size: 18px;
+  display: block;
+  padding: 10px;
 }
 
 .landing-page-adieu {
@@ -32,6 +36,8 @@
   font-size: 24px;
   font-style: oblique;
   font-weight: 300;
+  display: block;
+  padding: 10px;
 }
 
 .register-link {
@@ -57,6 +63,18 @@
 @media (max-width: 759px){
   .home h2 {
     font-size: 24px;
+  }
+
+  .landing-descrip {
+    font-size: 16px;
+  }
+
+  .landing-descrip-inner {
+    display: none;
+  }
+
+  .landing-page-adieu {
+    display: none;
   }
 }
 
