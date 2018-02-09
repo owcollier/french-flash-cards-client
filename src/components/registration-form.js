@@ -24,6 +24,9 @@ export class RegistrationForm extends React.Component {
                     onSubmit={this.props.handleSubmit(values =>
                         this.onSubmit(values)
                     )}>
+                    <span className="registration-message">Please register below:</span>
+                    <br></br>
+                    <br></br>
                     <label htmlFor="firstName">First name</label>
                     <Field component={Input} type="text" name="firstName" />
                     <label htmlFor="lastName">Last name</label>
