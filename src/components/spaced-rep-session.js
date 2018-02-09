@@ -26,12 +26,12 @@ export class SpacedRepSession extends React.Component {
         const correct = this.props.answer.toLowerCase();
         if (answer === correct) {
             this.setState({
-                feedback: `${answer} is the correct translation of ${this.props.question}. Congratulations!`,
+                feedback: `Congratulations! Your answer (${input}) is the correct translation of ${this.props.question}.`,
                 isCorrect: true
             })
         } else {
             this.setState({
-                feedback: `Sorry. ${answer} is not the correct translation. ${this.props.answer} is the correct English translation of ${this.props.question}`,
+                feedback: `Sorry. ${input} is not the correct translation. ${this.props.answer} is the correct English translation of ${this.props.question}`,
                 isCorrect: false
             })
         }
