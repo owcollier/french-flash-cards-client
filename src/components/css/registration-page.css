@@ -1,22 +1,10 @@
-.home h2 {
-  text-align: center;
-  font-style: oblique;
-  font-weight: 300; 
-}
-
-.app-description {
-  margin:auto;
-  width: 75%;
-  padding: 10px;
-}
-
-.register-link {
+.login-link {
   text-align: center;
   left: 50%;
   padding: 20px;
 }
 
-.register-link a {
+.login-link a {
   /* margin: auto; */
   position: relative;
   left: 3.5em;
@@ -26,7 +14,6 @@
   font-size: 16px;
   padding-top: 11px;
   padding-bottom: 11px;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 19px;
+  padding-right: 19px;
 }
-
