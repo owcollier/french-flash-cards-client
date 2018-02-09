@@ -1,5 +1,7 @@
 .home h2 {
-  text-align: center; 
+  text-align: center;
+  font-style: oblique;
+  font-weight: 300; 
 }
 
 .app-description {
@@ -16,5 +18,15 @@
 }
 
 .register-link a {
-  margin: auto;
+  /* margin: auto; */
+  position: relative;
+  left: 3.5em;
+  bottom: 61px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 3px;
+  font-size: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
