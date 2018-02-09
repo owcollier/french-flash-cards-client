@@ -27,7 +27,7 @@ export class HeaderBar extends React.Component {
                     <rect width="33" height="66" fill="#002395"></rect>
                 </svg>
                 <div className="title-name">
-                    <h1>Lingua Franca</h1>
+                    <h1>French Flash Cards</h1>
                 </div>
                 {logOutButton}
             </div>

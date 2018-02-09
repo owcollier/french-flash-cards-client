@@ -14,7 +14,7 @@ export function LandingPage(props) {
 
     return (
         <div className="home">
-            <h2>Welcome to French Flash Cards!</h2>
+            <h2>Bonjour!</h2>
             <div className="app-description">
                 <span className="landing-descrip"><strong>French Flash Cards is an application designed to help English speakers learn basic French vocabulary via Spaced Repetition based exercises.</strong></span>
                 <br></br>
