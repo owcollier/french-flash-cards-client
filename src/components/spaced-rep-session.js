@@ -49,11 +49,13 @@ export class SpacedRepSession extends React.Component {
         const isFeedback = this.state.feedback;
         return (
             <div className="session">
-                <span className="session-name">
-                    Welcome {this.props.name}!
-                </span>
-                <div className="session-score">
-                    You've translated {this.props.score} words correctly using French Flash Cards. Good job!
+                <div className="user-info">
+                    <span className="session-name">
+                        Welcome {this.props.name}!
+                    </span>
+                    <div className="session-score">
+                        You've translated {this.props.score} words correctly using French Flash Cards!
+                    </div>
                 </div>
                 <div className="session-qa">
                     <SpacedRepQuestion head={this.props.head} question={this.props.question}/>

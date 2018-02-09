@@ -14,7 +14,35 @@
   display: flex;
 }
 
-.session-qa div {
+.session-qa div, .user-info div {
   flex-grow: 1;
-  min-width: 22rem;
+  min-width: 27rem;
+}
+
+.user-info {
+  background: rgba(255, 250, 250, 0.8);
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+}
+
+@media (min-width: 760px) and (max-width: 1440px) {
+  .session-qa {
+    display: block;
+  }
+}
+
+@media (max-width: 759px){
+  .session-qa {
+    display: block;
+    font-size: .8em;
+  }
+  .session-qa div {
+    min-width: 12px;
+  }
+  .user-info div {
+    min-width: 12rem;
+    font-size: .8em;
+  }
 }

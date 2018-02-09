@@ -1,7 +1,6 @@
 .session-feedback {
     text-align: center;
     margin-top: 20px;
-    /* background-color: rgb(160, 220, 255); */
     border-radius: 5px;
     box-shadow: 1px 1px #ddaaaa;
     padding-top: 140px;
@@ -14,3 +13,9 @@
       margin-top: 20px;
 }
 
+@media (max-width: 759px){
+  .session-feedback {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

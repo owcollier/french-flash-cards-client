@@ -17,3 +17,10 @@
   text-shadow: 0 0 0.2em rgb(37, 255, 4);
   font-weight: bold; 
 }
+
+@media (max-width: 759px){
+  .session-question {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}

@@ -20,7 +20,7 @@
 .title-name {
   margin-left: 160px;
   position: absolute;
-  top: .2em;
+  top: -1em;
 }
 
 .flag {
@@ -33,4 +33,54 @@
 h1 {
   color: red;
   font-size: 3em;
+}
+
+@media (max-width: 900px){
+  h1 {
+    font-size: 1.5em;
+  }
+  .title-name {
+    margin-left: 160px;
+    position: absolute;
+    top: 1.7em;
+  }
+  .header-bar button {
+    position: absolute;
+    right: 2%;
+    top: 60px;
+    width: 60px;
+    height:30px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 3px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 560px){
+  h1 {
+    font-size: .8em;
+  }
+  .title-name {
+    margin-left: 70px;
+    position: absolute;
+    top: .6em;
+  }
+  .header-bar button {
+    position: absolute;
+    right: 2%;
+    top: 20px;
+    width: 40px;
+    height:20px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 3px;
+    font-size: 6px;
+  }
+  svg.flag {
+    top: -8px;
+    right: 10px;
+    transform: scale(.5, .5)
+  }
+  .header-bar {
+    height: 50px;
+  }
 }
