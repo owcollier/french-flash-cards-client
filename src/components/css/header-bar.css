@@ -1,9 +1,10 @@
 .header-bar {
   font-family: 'Croissant One', cursive;
   text-align: center;
-  background-color: white;
   height: 110px;
-  border-bottom: 2px solid #0000ff;
+
+  background: whitesmoke;
+  border-bottom: 2px solid rgba(0, 0, 255, 0.6);
 }
 
 .header-bar button {
@@ -20,7 +21,7 @@
 .title-name {
   margin-left: 160px;
   position: absolute;
-  top: -1em;
+  top: 20px;
 }
 
 .flag {
@@ -32,7 +33,7 @@
 
 h1 {
   color: #ff0000;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 @media (max-width: 900px){
