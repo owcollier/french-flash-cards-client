@@ -7,17 +7,14 @@
 }
 
 .app-description {
-  
+
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
   margin-bottom: 10px;
-  width: 75%;
-  padding: 10px;
+  padding: 1em 6em;
 
-  background: whitesmoke;
-  border: 2px solid rgba(0, 0, 255, 0.6);
-  border-radius: 3px;
+  background: white;
+  border-bottom: 4px solid rgba(0, 0, 255, 0.6);
 }
 
 .landing-descrip {
