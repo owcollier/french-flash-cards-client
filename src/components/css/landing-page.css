@@ -7,7 +7,7 @@
 }
 
 .app-description {
-  background: rgba(255, 250, 250, 0.8);
+  background: white;
   /* color: white; */
   margin-left: auto;
   margin-right: auto;
@@ -15,7 +15,7 @@
   margin-bottom: 10px;
   width: 75%;
   padding: 10px;
-  border: 1px solid rgba(255, 250, 250, 0.8); 
+  border: 2px solid blue;
   border-radius: 3px;
 }
 
