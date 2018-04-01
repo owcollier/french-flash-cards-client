@@ -1,6 +1,8 @@
 .session-question {
   text-align: center;
   margin-top: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
   background: rgba(16, 52, 226, 0.8);
   border-radius: 5px;
   box-shadow: 1px 1px #ddaaaa;
@@ -15,12 +17,20 @@
 
 .session-question-word {
   text-shadow: 0 0 0.2em rgb(37, 255, 4);
+  font-size: 1.5em;
   font-weight: bold; 
+}
+
+.card-counter {
+  font-style: italic;
+  font-weight: 100;
 }
 
 @media (max-width: 759px){
   .session-question {
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
