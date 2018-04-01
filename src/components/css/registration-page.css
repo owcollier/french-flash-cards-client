@@ -1,26 +1,14 @@
 .login-link {
   text-align: center;
-  left: 50%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .login-link a {
   /* margin: auto; */
-  text-decoration: none;
-  color: inherit;
   position: relative;
-  left: 3.5em;
-  bottom: 61px;
-  background-color: rgb(230, 230, 230);
-  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 3px;
-  font-size: 16px;
-  padding-top: 10px;
-  padding-bottom: 9px;
-  padding-left: 20px;
-  padding-right: 20px;
+  bottom: 2.8em;
+  color: rgba(0, 0, 255, 1);
+  font-size: 20px;
 }
 
 .registration-message {
