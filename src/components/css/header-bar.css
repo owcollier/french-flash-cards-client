@@ -4,7 +4,7 @@
   height: 110px;
 
   background: whitesmoke;
-  border-bottom: 4px solid rgba(0, 0, 255, 0.6);
+  border-bottom: 2px solid rgba(0, 0, 255, 0.4);
 }
 
 .header-bar button {

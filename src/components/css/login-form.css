@@ -1,5 +1,6 @@
 .login-container {
   background: whitesmoke;
+  border-bottom: 2px solid rgba(0, 0, 255, 0.4);
 }
 
 .login-span {
