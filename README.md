@@ -1,4 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# French Flash Cards
+
+A flash-card based language learning app bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+See it live at **https://frenchflashcards.netlify.com/**
+
+## Overview
+
+French Flash Cards is a language learning app that offers the user flash card exercises based on the notion of a *[forgetting curve](https://en.wikipedia.org/wiki/Forgetting_curve)* or the idea that over time, if we don't actively use or reflect on something we know, our knowledge decays.
+
+Once the user creates an account, a deck of flash card exercises containing French vocabulary and phrases is provided, which the user can work through at their leisure. When the user provides a correct answer, the flash card is pushed back further in the deck to reappear later. When the user provides an incorrect answer, the flash card is prioritized for repetition and remains closer to the beginning of the deck, so that it reappears more frequently.
+
+## So how is it actually working?
+
+The flash cards or *questions* in the user model are organized in a linked list data structure, with a head variable pointing to the flash card at the top of the deck and a memory strength value attached to each question. When the user answers a question correctly, the memory strength value is increased and an algorithm uses that memory strength value to assign the question a new position in the linked list. On an incorrect answer, a question's memory strength value is reset to a base value, which places it at the closest open position towards the beginning of the linked list.
+
+See **users/models.js** and the POST request to /submit in **questions/router.js** on the [back end](https://github.com/owcollier/french-flash-cards-server) to inspect the relevant code.
+
+## notes on the API
+
+French Flash Cards maintains a RESTful API on the back end to expose user and questions data to the client
+
+Server repo: https://github.com/owcollier/french-flash-cards-server
+
+ * **/api/users** supports both GET and POST requests, for retrieving and creating a user respectively.
+
+ * **/api/auth** supports POST requests at */login* and */refresh* endpoints, for user authentication purposes.
+
+ * **/api/questions** supports GET requests at */next* and POST requests at */submit* for retrieving the next flash card in the sequence and submitting an answer to a question respectively.
+
+## Technologies used:
+
+**On the front-end:**
+  * [React](https://reactjs.org/)
+  * [Redux](https://redux.js.org/)
+
+**On the back-end:**
+  * [Node.js](https://nodejs.org/en/) & [Express](https://expressjs.com/)
+  * [MongoDB](https://www.mongodb.com/)
+  * [Mongoose](http://mongoosejs.com/)
+
+<!-- This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
@@ -1620,4 +1661,4 @@ Please refer to [this section](#resolving-heroku-deployment-errors).
 
 ## Something Missing?
 
-If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
+If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md) -->
