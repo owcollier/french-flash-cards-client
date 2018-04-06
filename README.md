@@ -2,7 +2,19 @@
 
 A flash-card based language learning app bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+<p align='center'>
+    <img width='600' height='450'src='https://i.imgur.com/B4GuAbp.png'>	
+</p>
+
 See it live at **https://frenchflashcards.netlify.com/**
+
+### Demo Account Login
+
+```
+login: BigBlue  
+password: bluemangroup
+
+```
 
 ## Overview
 
